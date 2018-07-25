@@ -23,7 +23,9 @@ import ScalaJSPlugin.autoImport._
 import microsites.MicrositesPlugin.autoImport._
 import scoverage.ScoverageKeys
 import org.portablescala.sbtplatformdeps.PlatformDepsPlugin.autoImport._
-import org.scalajs.sbtplugin.cross.{CrossProject, CrossType}
+import sbtcrossproject.CrossProject
+import sbtcrossproject.CrossPlugin.autoImport._
+import scalajscrossproject.ScalaJSCrossPlugin.autoImport._
 
 /**
  * Plugin that automatically brings into scope all predefined val's and method
@@ -290,7 +292,7 @@ trait CatalystsBase {
     parallelExecution := false,
     jsEnv := new org.scalajs.jsenv.nodejs.NodeJSEnv(),
     // batch mode decreases the amount of memory needed to compile scala.js code
-    scalaJSOptimizerOptions := scalaJSOptimizerOptions.value.withBatchMode(travisBuild.value)
+    scalaJSLinkerConfig := scalaJSLinkerConfig.value.withBatchMode(travisBuild.value)
   )
 
   /**
@@ -485,7 +487,7 @@ trait CatalystsBase {
 
     val cpId = id.stripSuffix("M")
 
-    CrossProject(cpId, new File(cpId), crossType)
+    CrossProject(cpId, new File(cpId), crossType, JSPlatform, JVMPlatform)
      .settings(moduleName := s"$proj-$id")
     .configureCross(projConfig)
   }

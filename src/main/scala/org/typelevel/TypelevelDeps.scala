@@ -14,32 +14,32 @@ object Dependencies {
    */
   val versions = Map[String, String](
     "algebra"        -> "1.0.0",
-    "catalysts"      -> "0.6",
-    "cats"           -> "1.1.0",
-    "cats-effect"    -> "1.0.0-RC2",
+    "catalysts"      -> "0.7-KH",
+    "cats"           -> "1.1.1-KH",
+    "cats-effect"    -> "1.0.0-KH",
     "cats-mtl"       -> "0.3.0",
     "kittens"        -> "1.0.0",
     "mouse"          -> "0.16",
     "dogs"           -> "0.6.10",
-    "discipline"     -> "0.9.0",
+    "discipline"     -> "0.10.1-KH",
     "export-hook"    -> "1.2.0",
     "kind-projector" -> "0.9.6",
-    "machinist"      -> "0.6.4",
-    "macro-compat"   -> "1.1.1",
+    "machinist"      -> "0.6.6-KH",
+    "macro-compat"   -> "1.1.2-KH",
     "monocle"        -> "1.5.0-cats",
     "paradise"       -> "2.1.0",
     "refined"        -> "0.8.7",
-    "scalacheck"     -> "1.13.5",
-    "scalatest"      -> "3.0.5",
+    "scalacheck"     -> "1.14.1-SNAPSHOT-KH",
+    "scalatest"      -> "3.1.0-KH",
     "scalac"         -> "2.12.6",
     "scalac_2.13"    -> "2.13.0-M3",
     "scalac_2.12"    -> "2.12.6",
     "scalac_2.11"    -> "2.11.12",
     "scalac_2.10"    -> "2.10.7",
-    "shapeless"      -> "2.3.3",
-    "simulacrum"     -> "0.12.0",
+    "shapeless"      -> "2.4.0-KH",
+    "simulacrum"     -> "0.13.0-KH",
     "scodec"         -> "1.10.3",
-    "specs2"         -> "3.9.2"
+    "specs2"         -> "4.3.2-KH"
   )
 
   /**
